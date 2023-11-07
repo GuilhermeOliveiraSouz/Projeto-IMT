@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   cellsWithEvent.forEach(cell => {
     cell.addEventListener("click", function() {
-      // Aqui você pode implementar a lógica para exibir os eventos do dia
+      // logica javascript aqui
       alert("Mostrar eventos para o dia " + cell.innerText);
     });
   });
