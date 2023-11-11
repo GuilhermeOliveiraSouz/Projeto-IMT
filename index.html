@@ -1,6 +1,5 @@
-<html>
-<head>
-    <title>Criar Agenda</title>
+<html><head>
+    <title>Agenda Escolar</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -8,248 +7,33 @@
         h1 {
             font-size: 7.0em;
         }
-        h2 {
-            font-size: 3.5;
-        }
-        .day {
-            border: 1px solid #ddd;
-            text-align: left;
-            padding: 50px;
-            font-size: 4.0em;
-            margin: 10px;
-            position: relative;
-        }
-        .event-button {
+        button {
+            display: block;
+            width: 100%;
+            border: none;
             background-color: #4CAF50;
             color: white;
-            border: none;
-            padding: 35px 55px;
+            padding: 80px 160px;
             text-align: center;
             text-decoration: none;
-            display: inline-block;
-            font-size: 45px;
-            margin: 10px;
+            font-size: 80px;
+            margin: 90px 0;
             cursor: pointer;
-            position: absolute;
-            bottom: 30px;
-            right: 20px;
+            border-radius: 12px;
         }
-        .event-input {
-            display: none;
-            font-size: 16px;
-            padding: 10px;
-            margin-top: 10px;
-        }
-        .event-text {
-            color: red;
-            font-size: 50px; /* Ajuste o tamanho do texto aqui */
-            margin-top: 10px;
+        @media screen and (min-width: 600px) {
+            button {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Novembro</h1>
-    
-    <div class="day" id="day1">
-        <span>1</span>
-        <button class="event-button" onclick="showInput(1)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput1" placeholder="Digite o evento">
-        <div class="event-text" id="eventText1"></div>
-    </div>
-    <div class="day" id="day2">
-        <span>2</span>
-        <button class="event-button" onclick="showInput(2)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput2" placeholder="Digite o evento">
-        <div class="event-text" id="eventText2"></div>
-    </div>
-    <div class="day" id="day3">
-        <span>3</span>
-        <button class="event-button" onclick="showInput(3)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput3" placeholder="Digite o evento">
-        <div class="event-text" id="eventText3"></div>
-    </div>
-    <div class="day" id="day4">
-        <span>4</span>
-        <button class="event-button" onclick="showInput(4)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput4" placeholder="Digite o evento">
-        <div class="event-text" id="eventText4"></div>
-    </div>
-    <div class="day" id="day5">
-        <span>5</span>
-        <button class="event-button" onclick="showInput(5)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput5" placeholder="Digite o evento">
-        <div class="event-text" id="eventText5"></div>
-    </div>
-    <div class="day" id="day6">
-        <span>6</span>
-        <button class="event-button" onclick="showInput(6)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput6" placeholder="Digite o evento">
-        <div class="event-text" id="eventText6"></div>
-    </div>
-    </div>
-    <div class="day" id="day7">
-        <span>7</span>
-        <button class="event-button" onclick="showInput(7)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput7" placeholder="Digite o evento">
-        <div class="event-text" id="eventText7"></div>
-    </div>
-    <div class="day" id="day8">
-        <span>8</span>
-        <button class="event-button" onclick="showInput(8)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput8" placeholder="Digite o evento">
-        <div class="event-text" id="eventText8"></div>
-    </div>
-    <div class="day" id="day9">
-        <span>9</span>
-        <button class="event-button" onclick="showInput(9)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput9" placeholder="Digite o evento">
-        <div class="event-text" id="eventText9"></div>
-    </div>
-    <div class="day" id="day10">
-        <span>10</span>
-        <button class="event-button" onclick="showInput(10)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput10" placeholder="Digite o evento">
-        <div class="event-text" id="eventText10"></div>
-    </div>
-    <div class="day" id="day11">
-        <span>11</span>
-        <button class="event-button" onclick="showInput(11)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput11" placeholder="Digite o evento">
-        <div class="event-text" id="eventText11"></div>
-    </div>
-    <div class="day" id="day12">
-        <span>12</span>
-        <button class="event-button" onclick="showInput(12)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput12" placeholder="Digite o evento">
-        <div class="event-text" id="eventText12"></div>
-    </div>
-    <div class="day" id="day13">
-        <span>13</span>
-        <button class="event-button" onclick="showInput(13)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput13" placeholder="Digite o evento">
-        <div class="event-text" id="eventText13"></div>
-    </div>
-    <div class="day" id="day14">
-        <span>14</span>
-        <button class="event-button" onclick="showInput(14)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput14" placeholder="Digite o evento">
-        <div class="event-text" id="eventText14"></div>
-    </div>
-    <div class="day" id="day15">
-        <span>15</span>
-        <button class="event-button" onclick="showInput(15)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput15" placeholder="Digite o evento">
-        <div class="event-text" id="eventText15"></div>
-    </div>
-    <div class="day" id="day16">
-        <span>16</span>
-        <button class="event-button" onclick="showInput(16)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput16" placeholder="Digite o evento">
-        <div class="event-text" id="eventText16"></div>
-    </div>
-    <div class="day" id="day17">
-        <span>17</span>
-        <button class="event-button" onclick="showInput(17)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput17" placeholder="Digite o evento">
-        <div class="event-text" id="eventText17"></div>
-    </div>
-    <div class="day" id="day18">
-        <span>18</span>
-        <button class="event-button" onclick="showInput(18)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput18" placeholder="Digite o evento">
-        <div class="event-text" id="eventText18"></div>
-    </div>
-    <div class="day" id="day19">
-        <span>19</span>
-        <button class="event-button" onclick="showInput(19)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput19" placeholder="Digite o evento">
-        <div class="event-text" id="eventText19"></div>
-    </div>
-    <div class="day" id="day20">
-        <span>20</span>
-        <button class="event-button" onclick="showInput(20)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput20" placeholder="Digite o evento">
-        <div class="event-text" id="eventText20"></div>
-    </div>
-    <div class="day" id="day21">
-        <span>21</span>
-        <button class="event-button" onclick="showInput(21)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput21" placeholder="Digite o evento">
-        <div class="event-text" id="eventText21"></div>
-    </div>
-    <div class="day" id="day22">
-        <span>22</span>
-        <button class="event-button" onclick="showInput(22)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput22" placeholder="Digite o evento">
-        <div class="event-text" id="eventText22"></div>
-    </div>
-    <div class="day" id="day23">
-        <span>23</span>
-        <button class="event-button" onclick="showInput(23)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput23" placeholder="Digite o evento">
-        <div class="event-text" id="eventText23"></div>
-    </div>
-    <div class="day" id="day1">
-        <span>24</span>
-        <button class="event-button" onclick="showInput(24)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput24" placeholder="Digite o evento">
-        <div class="event-text" id="eventText24"></div>
-    </div>
-    <div class="day" id="day25">
-        <span>25</span>
-        <button class="event-button" onclick="showInput(25)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput25" placeholder="Digite o evento">
-        <div class="event-text" id="eventText25"></div>
-    </div>
-    <div class="day" id="day26">
-        <span>26</span>
-        <button class="event-button" onclick="showInput(26)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput26" placeholder="Digite o evento">
-        <div class="event-text" id="eventText26"></div>
-    </div>
-    <div class="day" id="day27">
-        <span>27</span>
-        <button class="event-button" onclick="showInput(27)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput27" placeholder="Digite o evento">
-        <div class="event-text" id="eventText27"></div>
-    </div>
-    <div class="day" id="day28">
-        <span>28</span>
-        <button class="event-button" onclick="showInput(28)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput28" placeholder="Digite o evento">
-        <div class="event-text" id="eventText28"></div>
-    </div>
-    <div class="day" id="day29">
-        <span>29</span>
-        <button class="event-button" onclick="showInput(29)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput29" placeholder="Digite o evento">
-        <div class="event-text" id="eventText29"></div>
-    </div>
-        <div class="day" id="day30">
-        <span>30</span>
-        <button class="event-button" onclick="showInput(30)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput30" placeholder="Digite o evento">
-        <div class="event-text" id="eventText30"></div>
-    </div>
-
-    <div class="day" id="day31">
-        <span>31</span>
-        <button class="event-button" onclick="showInput(31)">Adicionar Evento</button>
-        <input type="text" class="event-input" id="eventInput31" placeholder="Digite o evento">
-        <div class="event-text" id="eventText31"></div>
-    </div>
+    <h1>Agenda Escolar</h1>
+    <button onclick="location.href='criar.html'">Criar Agenda</button>
+    <button onclick="location.href='agenda.html'">Agenda Atual</button>
 
 
-    <script>
-        function showInput(dayNumber) {
-            var input = document.getElementById('eventInput' + dayNumber);
-            var text = prompt('Digite o evento:');
-            
-            if (text !== null) {
-                var eventText = document.getElementById('eventText' + dayNumber);
-                eventText.innerHTML = text;
-            }
-        }
-    </script>
-</body>
-</html>
+</body></html>
