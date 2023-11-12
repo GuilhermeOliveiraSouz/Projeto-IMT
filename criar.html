@@ -64,6 +64,9 @@
             position: relative;
         }
     </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
 </head>
 <body>
     <h1>Novembro</h1>
@@ -283,30 +286,71 @@
 
 <button id="save-button" onclick="saveEvents()">Salvar</button>
 
-    <script>
+ <script>
+        // Load events from localStorage on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            loadEvents();
+        });
+
         function showInput(dayNumber) {
             var input = document.getElementById('eventInput' + dayNumber);
             var text = prompt('Digite o evento:');
-            
+
             if (text !== null) {
                 var eventText = document.getElementById('eventText' + dayNumber);
                 eventText.innerHTML = text;
+
+                // Save events to localStorage when edited
+                saveEvents();
             }
         }
-            function saveEvents() {
+
+        function saveEvents() {
             var eventElements = document.querySelectorAll('.event-text');
             var events = [];
 
-            eventElements.forEach(function(element) {
+            eventElements.forEach(function (element) {
                 events.push(element.innerHTML);
             });
 
-            var blob = new Blob([events.join('\n')], { type: 'text/plain' });
-            var link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = 'agenda.html';
-            link.click();
+            // Save events to localStorage
+            localStorage.setItem('events', JSON.stringify(events));
+        }
+
+        function loadEvents() {
+            // Load events from localStorage
+            var storedEvents = localStorage.getItem('events');
+
+            if (storedEvents) {
+                var events = JSON.parse(storedEvents);
+
+                // Apply loaded events to the UI
+                events.forEach(function (event, index) {
+                    var eventText = document.getElementById('eventText' + (index + 1));
+                    if (eventText) {
+                        eventText.innerHTML = event;
+                    }
+                });
+            }
+        }
+
+        function downloadPDF() {
+            var eventElements = document.querySelectorAll('.event-text');
+            var events = [];
+
+            eventElements.forEach(function (element) {
+                events.push(element.innerHTML);
+            });
+
+            var pdf = new jsPDF();
+            
+            events.forEach(function (event, index) {
+                pdf.text(10, 10 + index * 10, event);
+            });
+
+            pdf.save('agenda.pdf');
         }
     </script>
+    
 </body>
 </html>
