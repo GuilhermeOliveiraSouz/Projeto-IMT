@@ -1,31 +1,55 @@
-<html><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda Escolar</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
+
         h1 {
-            font-size: 7.0em;
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 30px;
         }
+
         button {
             display: block;
             width: 100%;
+            max-width: 600px;
             border: none;
             background-color: #4CAF50;
             color: white;
-            padding: 80px 160px;
+            padding: 20px;
             text-align: center;
             text-decoration: none;
-            font-size: 80px;
-            margin: 90px 0;
+            font-size: 2em;
+            margin: 30px 0;
             cursor: pointer;
             border-radius: 12px;
+            transition: background-color 0.3s;
+            animation: pulse 2s infinite;
         }
-        @media screen and (min-width: 600px) {
-            button {
-                width: 90%;
-                margin-left: auto;
-                margin-right: auto;
+
+        @keyframes pulse {
+            0% {
+                background-color: #4CAF50;
+            }
+            50% {
+                background-color: #45a049;
+            }
+            100% {
+                background-color: #4CAF50;
             }
         }
     </style>
@@ -33,5 +57,5 @@
 <body>
     <h1>Agenda Escolar</h1>
     <button onclick="location.href='criar.html'">Sua Agenda</button>
-
-</body></html>
+</body>
+</html>
