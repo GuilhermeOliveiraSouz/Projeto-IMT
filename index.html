@@ -18,10 +18,13 @@
         }
         header {
             text-align: center;
-            padding: 22px;
+            padding: 20px;
+            background-color: #333;
             color: white;
-            font-size: 20px;
-            height: 70px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Garante que o cabeçalho fique acima do restante do conteúdo */
         }
         h1 {
             font-size: 2.5em;
@@ -63,7 +66,7 @@
 <body>
     <header>
         <h1>Nexus Automation</h1>
-        <p>Sistema Escolar</p> 
+        <p>Beta v1.8</p> 
     </header>
     <h1>Agenda Escolar</h1>
     <button onclick="location.href='criar.html'">Sua Agenda</button>
